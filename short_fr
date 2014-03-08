@@ -1,3 +1,3 @@
 #!/bin/sh
 
-pdflatex --jobname=bouchenycv-fr.short '\providecommand\locale{fr}\providecommand\choseflavor{\flavor{short}}\input{cv.ltx}'
+pdflatex --jobname=bouchenycv-fr.short '\providecommand\choseflavor{\flavor{short}}\input{cv-fr.ltx}'

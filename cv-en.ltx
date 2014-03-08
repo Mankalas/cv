@@ -1,0 +1,51 @@
+%%% cv.ltx
+
+%% Author:        Didier Verna <didier@lrde.epita.fr>
+%% Maintainer:    Vincent Boucheny <mankalas@gmail.com>
+%% Created:       Fri May 21 18:07:48 1999 under XEmacs 21.2 (beta 12)
+%% Last Revision: Mon Jul 12 12:00:43 1999
+
+
+%%% Commentary:
+
+%% Contents management by FCM version 0.1.
+
+% \typein[\draftorfinal]{Please specify draft or final (draft by default):}
+% \ifx\draftorfinal\empty
+% \def\draftorfinal{draft}
+% \fi
+
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[a4paper,skipsamekey,11pt]{curve}
+\usepackage[a4paper,nohead,nofoot,hmargin=1.5cm,vmargin=1.5cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{eurosym}
+\usepackage{palatino}
+\usepackage{graphicx}
+\usepackage[colorlinks]{hyperref}
+\usepackage[none]{hyphenat}
+%% Date format
+\usepackage{datetime}
+
+\input{header-en.ltx}
+\input{preamble.ltx}
+
+\begin{document}
+
+\newdate{birthday}{10}{03}{1984}
+
+\makeheaders[t]
+\maketitle
+
+\makerubric{synthese-en}
+\makerubric{experience-en}
+\makerubric{skills-en}
+\makerubric{education-en}
+\makerubric{languages-en}
+\makerubric{misc-en}
+
+\end{document}
+
+%%% cv.ltx ends here
