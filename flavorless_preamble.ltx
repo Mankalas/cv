@@ -1,0 +1,73 @@
+%%% cv.ltx
+
+%% Author:        Didier Verna <didier@lrde.epita.fr>
+%% Maintainer:    Vincent Boucheny <mankalas@gmail.com>
+%% Created:       Fri May 21 18:07:48 1999 under XEmacs 21.2 (beta 12)
+%% Last Revision: Mon Jul 12 12:00:43 1999
+
+%%% Commentary:
+
+%% Contents management by FCM version 0.1.
+
+% \typein[\draftorfinal]{Please specify draft or final (draft by default):}
+% \ifx\draftorfinal\empty
+% \def\draftorfinal{draft}
+% \fi
+
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[a4paper,skipsamekey,10pt]{curve}
+
+\usepackage[a4paper,nohead,nofoot,hmargin=1.5cm,vmargin=1.5cm]{geometry}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{eurosym}
+\usepackage{palatino}
+\usepackage{graphicx}
+\usepackage[colorlinks]{hyperref}
+\usepackage[none]{hyphenat}
+%% Date format
+\usepackage{datetime}
+
+\titlefont{\fontfamily{pag}\selectfont\bfseries\Large}
+\subtitlefont{\fontfamily{pag}\selectfont\itshape\large}
+\rubricfont{\fontfamily{pag}\selectfont\bfseries}
+\subrubricfont{\fontfamily{pag}\selectfont\bfseries\itshape\large}
+\keyfont{\fontfamily{pag}\selectfont\bfseries}
+
+\usepackage{pifont}
+\prefix{}
+\continuedname{~~(suite)}
+
+\setlength\subrubricspace{1pt}
+
+\usepackage{color}
+\makeatletter
+\def\@@rubrichead#1{%
+  \@rubricfont%
+  \makebox[0pt][l]{%
+    \colorbox[gray]{0.7}{\makebox[\@almosttextwidth-4\fboxsep]{}}}%
+  \makebox[\@almosttextwidth-2\fboxsep][c]{#1}\par\vspace\rubricspace}
+% Or underline rubric titles:
+% \def\@@rubrichead#1{%
+%   \@rubricfont%
+%   \makebox[0pt][l]{%
+%     \rule[-2mm]{\@almosttextwidth}{1mm}}%
+%   \makebox[\@almosttextwidth-2\fboxsep][c]{#1}\par\vspace\rubricspace}
+% \def\@@subrubric#1{%
+%   \parbox{0cm}{%
+%     \raisebox{\@beforespace}{\@subrubricfont%
+%       \makebox[1ex][l]{\colorbox[gray]{0.7}{\textcolor[gray]{0.7}{M}}}#1}%
+%     \par\vspace\subrubricspace}%
+%   \@subrubricmark{#1}}
+\makeatother
+
+\headerscale{.55}
+
+\makeatletter
+\def\mymulticol{\@nextentry\noalign{\gdef\@nextentry{}}
+  \multicolumn}
+\makeatother
+\pagestyle{empty}
+
+\newdate{birthday}{10}{03}{1984}
