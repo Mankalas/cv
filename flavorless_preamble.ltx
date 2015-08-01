@@ -19,8 +19,7 @@
 
 \usepackage[a4paper,nohead,nofoot,hmargin=1.5cm,vmargin=1.5cm]{geometry}
 \usepackage[french]{babel}
-\usepackage[latin1]{inputenc}
-\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage{eurosym}
 \usepackage{palatino}
 \usepackage{graphicx}
@@ -72,5 +71,5 @@
 
 % New definitions used in the experience rubric.
 % The command \at must be defined.
-\def\jobTitle#1#2#3{{\fontfamily{pag}\selectfont\bfseries\large #1 \at~\textit{#2}~(#3) }}
+\def\jobTitle#1#2#3{{\fontfamily{pag}\selectfont\bfseries\large #1 \at{} \textit{#2}~(#3)}}
 \def\technologies#1{{\fontfamily{pag}\selectfont\bfseries Technologies~:} #1.}
